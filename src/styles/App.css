@@ -3,6 +3,14 @@ a {
   text-decoration: none;
 }
 
+.center {
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
+}
+
 /*Navigation*/
 nav {
   background-color: #292a2d;
@@ -20,4 +28,81 @@ nav {
 .nav_2 {
   color: #8d8d8c;
   margin-right: 15px;
+}
+
+/*App*/
+#App {
+  position: relative;
+  text-align: center;
+  /*color: white;*/
+}
+
+.title {
+  color: #258597;
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: white;
+  background-color: rgba(0,0,0, 0.5);
+  padding: 5px;
+}
+
+img {
+  margin: 50px 0;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+/*Form*/
+#form {
+  width: 60%;
+  margin: 0 auto;
+
+}
+
+label {
+  margin: 10px 0;
+}
+
+input, textarea {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+button {
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.form_section {
+  display: flex;
+  flex-direction: column;
+}
+
+/*PostList*/
+.posts {
+  border: 1px solid grey;
+  padding: 10px 15px;
+  color: #308dd7;
+}
+
+.posts:hover {
+  color: #6791b1;
+  text-decoration: underline;
+}
+
+/*ShowPost*/
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
 }

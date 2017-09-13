@@ -9,19 +9,20 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Components
-import App from './components/App';
-import BaseLayout from './components/BaseLayout';
-import CreatePost from './components/CreatePost';
-import ShowPost from './components/ShowPost';
-// import PostList from "./components/PostList";
+import App from "./components/App";
+import BaseLayout from "./components/BaseLayout";
+import CreatePost from "./components/CreatePost";
+import ShowList from "./components/PostList";
+import ShowPost from "./components/ShowPost";
 
 ReactDOM.render(
   <BrowserRouter>
     <BaseLayout>
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/CreatePost" component={CreatePost} />
-        <Route path="/ShowPost" component={ShowPost} />
+        <Route path="/create" component={CreatePost} />
+        <Route path="/show" component={ShowList} />
+        <Route path="/show/:id" component={ShowPost} />
       </Switch>
     </BaseLayout>
   </BrowserRouter>
