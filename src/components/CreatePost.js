@@ -65,7 +65,7 @@ class CreatePost extends Component {
           <textarea rows="5" name="blog" type="text" value={this.state.blog}onChange={this.handleBlogChange} />
         </div>
 
-        <button type="submit" className="btn btn-primary form-control" href="/">Submit</button>
+        <button type="submit" href="/">Submit</button>
       </form>
     )
   }

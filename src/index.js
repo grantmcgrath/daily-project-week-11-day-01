@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 // Styles
 import './styles/index.css';
 
-import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import registerServiceWorker from './registerServiceWorker';
 
 // Components
 import App from "./components/App";
@@ -21,7 +21,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/create" component={CreatePost} />
-        <Route path="/show" component={ShowList} />
+        <Route exact path="/show" component={ShowList} />
         <Route path="/show/:id" component={ShowPost} />
       </Switch>
     </BaseLayout>

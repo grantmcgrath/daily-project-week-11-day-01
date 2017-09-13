@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 
+import { Link } from "react-router-dom";
+
 export default class ShowPost extends Component {
   constructor(props) {
     super(props);
@@ -18,15 +20,18 @@ export default class ShowPost extends Component {
     fetch(URL)
     .then(response => response.json())
     .then(data =>
-      this.setState({name: data.name, title: data.title, post: data.post}))
+      this.setState({name: data.name, title: data.title, post: data.blog}))
   }
 
   render() {
     return (
-      <div className="list">
-        <h1>{this.state.title}</h1>
-        <h4>{this.state.name}</h4>
-        <p>{this.state.post}</p>
+      <div id="post">
+        <div className="list center post">
+          <h1 className="spacing">{this.state.title}</h1>
+          <h4 className="spacing author">{this.state.name}</h4>
+          <p className="spacing">{this.state.post}</p>
+          <Link to="/show" className="b2bl">Back To Blog List</Link>
+        </div>
       </div>
     )
   }
